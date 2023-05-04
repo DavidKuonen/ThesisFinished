@@ -19,7 +19,7 @@ contract ThesisContract {
     }
 
     //An array of the struct Type "Room"
-    Room[] allRooms;
+    Room[] public allRooms;
 
     //An address called owner that is payable, which means it can receive ETH
     address payable public owner;
