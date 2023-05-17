@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "@truffle/hdwallet-provider": "^2.1.11",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "eth-block-tracker": "^7.0.1",
+    "truffle": "^5.9.0"
   }
 }
