@@ -71,9 +71,10 @@ module.exports = {
      mainnet: {
       provider: () => new HDWalletProvider(process.env.ETH_WALLET_MNEMONIC, process.env.INFURA_ENDPOINT),
       network_id: 1,       // mainnet's id
-      gas: 5500000,        // Gas sent with each transaction
+      gas: 300000,        // Gas sent with each transaction
       gasPrice: 20000000000,// 20 gwei (in wei) (default: 100 gwei)
       confirmations: 2,    // # of confirmations to wait between deployments. (default: 0)
+      networkCheckTimeout: 10000,
       timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
     }
