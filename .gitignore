@@ -1,0 +1,3 @@
+# In order to not publish our keys
+.env
+node_modules

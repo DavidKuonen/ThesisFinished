@@ -40,11 +40,10 @@
  *
  * https://trufflesuite.com/docs/truffle/getting-started/using-the-truffle-dashboard/
  */
-
-// require('dotenv').config();
 // const { MNEMONIC, PROJECT_ID } = process.env;
 
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
+ require('dotenv').config();
+ const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 module.exports = {
   /**
@@ -69,6 +68,15 @@ module.exports = {
       port: 8545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
      }*/
+     mainnet: {
+      provider: () => new HDWalletProvider(process.env.ETH_WALLET_MNEMONIC, process.env.INFURA_ENDPOINT),
+      network_id: 1,       // mainnet's id
+      gas: 5500000,        // Gas sent with each transaction
+      gasPrice: 20000000000,// 20 gwei (in wei) (default: 100 gwei)
+      confirmations: 2,    // # of confirmations to wait between deployments. (default: 0)
+      timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
+      skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
+    }
     //
     // An additional network, but with some advanced options…
     // advanced: {
