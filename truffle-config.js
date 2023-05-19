@@ -44,7 +44,7 @@
 
  require('dotenv').config();
  const HDWalletProvider = require('@truffle/hdwallet-provider');
-
+ web3 = require('web3')
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -67,18 +67,13 @@ module.exports = {
       host: "127.0.0.1",     // Localhost (default: none)
       port: 8545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
-     },
+     },*/
 
      mainnet: {
-      provider: () => new HDWalletProvider(process.env.ETH_WALLET_MNEMONIC, process.env.INFURA_ENDPOINT),
+      provider: () => new HDWalletProvider(process.env.ETH_WALLET_MNEMONIC, process.env.INFURA_ENDPOINT_MAINNET),
       network_id: 1,       // mainnet's id
-      //gas: 30000000,        // Gas sent with each transaction
-      //gasPrice: 20000000000,// 20 gwei (in wei) (default: 100 gwei)
-      confirmations: 2,    // # of confirmations to wait between deployments. (default: 0)
-      networkCheckTimeout: 10000,
-      timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-      skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
-    },*/
+      gasPrice: web3.utils.toWei('150', 'gwei')
+    },
     //
     // An additional network, but with some advanced options…
     // advanced: {

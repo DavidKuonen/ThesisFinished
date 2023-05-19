@@ -28,7 +28,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -52,7 +53,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -65,7 +67,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -78,7 +81,8 @@
       "name": "book",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"allRooms\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"id\",\"type\":\"int256\"},{\"internalType\":\"enum ThesisContract.Statuses\",\"name\":\"currentStatus\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"book\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"myRoom\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"id\",\"type\":\"int256\"},{\"internalType\":\"enum ThesisContract.Statuses\",\"name\":\"currentStatus\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ThesisContract.sol\":\"ThesisContract\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ThesisContract.sol\":{\"keccak256\":\"0x5c814dc7934b756a5a07a7e7e6ab1d948bf4c1c9b1d20215458ba64f70b3d7c1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://112fe8b35f4b795b9b5122af2b182b166c14861875afc19fe0b7aae50085e5e6\",\"dweb:/ipfs/QmRVN8VsJ6vjvGx3TrDDWfiF9wQxgs28ALt3RD72AgtueS\"]}},\"version\":1}",
@@ -4695,6 +4699,12 @@
     "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
   },
   "networks": {
+    "1": {
+      "events": {},
+      "links": {},
+      "address": "0x94adc870B9a044282e61dc3aA908A8Ae3c3B4cAF",
+      "transactionHash": "0xda74e6f30fd1db7bc0334808f44c5df5920c0ac0987d0913499879a91b81eb3e"
+    },
     "11155111": {
       "events": {},
       "links": {},
@@ -4703,7 +4713,8 @@
     }
   },
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-05-17T14:59:40.212Z",
+  "updatedAt": "2023-05-18T18:04:30.423Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},
